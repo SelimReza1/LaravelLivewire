@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Action;
 use App\Http\Livewire\Form;
+use App\Http\Livewire\FormValidation;
 use App\Http\Livewire\Home;
 use App\Http\Livewire\Post;
 use App\Http\Livewire\User;
@@ -27,3 +28,4 @@ Route::get('/user',User::class);
 Route::get('/home/{name?}',Home::class);
 Route::get('/form',Form::class);
 Route::get('/action',Action::class);
+Route::get('/validation',FormValidation::class);
