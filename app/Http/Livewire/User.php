@@ -4,12 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\User as Users;
+use Livewire\WithPagination;
 class User extends Component
 {
-    public $users;
+    use WithPagination;
+
     public function render()
     {
-        $this->users= Users::all();
-        return view('livewire.user');
+        $users= Users::paginate(5);
+        return view('livewire.user',['users'=>$users]);
     }
 }
