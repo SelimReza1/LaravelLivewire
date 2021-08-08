@@ -24,8 +24,9 @@ Route::get('/', function () {
 });
 
 Route::get('/post',Post::class);
-Route::get('/user',User::class);
+//Route::get('/user',User::class);
 Route::get('/home/{name?}',Home::class);
 Route::get('/form',Form::class);
 Route::get('/action',Action::class);
 Route::get('/validation',FormValidation::class);
+Route::get('/users',User::class);
